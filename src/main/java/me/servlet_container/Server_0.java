@@ -30,6 +30,8 @@ public class Server_0 {
     }
 
     /**
+     * 실행 후 브라우저에서 http://localhost:8000 로 접속.
+     *
      * 출력 결과:
      *
      *      GET / HTTP/1.1
