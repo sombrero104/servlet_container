@@ -93,12 +93,30 @@ public class Server_2 {
             }
             System.out.println("<--");
         }
-        System.out.println("End of HTTP MEssage.");
+        System.out.println("End of HTTP Message.");
     }
 
     public static void main(String[] args) throws IOException {
         Server_2 server_2 = new Server_2();
         server_2.boot();
     }
+
+    /**
+     * 실행 후 브라우저에서 http://localhost:8000 로 접속.
+     *
+     * 출력 결과:
+     *
+     *      METHOD: GET REQ: / HTTP VER. HTTP/1.1
+     *      Header list
+     *          Key: Accept Value:  text/html,application/xhtml+xml,application/xml;q=0.9,*⁄*;q=0.8
+     *          Key: Upgrade-Insecure-Requests Value:  1
+     *          Key: User-Agent Value:  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15
+     *          Key: Connection Value:  keep-alive
+     *          Key: Host Value:  localhost:8000
+     *          Key: Accept-Language Value:  ko-kr
+     *          Key: Accept-Encoding Value:  gzip, deflate
+     *      End of HTTP Message.
+     *
+     */
 
 }
