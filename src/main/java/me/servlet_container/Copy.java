@@ -12,6 +12,10 @@ import java.io.*;
  * 매개변수로 전달 받은 파일에 대해
  * noBufferAction()은 한 바이트씩 읽은 다음 다시 복제된 파일에 쓰고,
  * bufferAction()은 내부 퍼버를 최대 1,024 바이트까지 읽은 후 파일에 읽어들인 바이트 배열을 쓴다.
+ *
+ * 출력 결과:
+ *      noBufferAction() => 0.023 밀리세컨드
+ *      bufferAction() => 0.000 밀리세컨드
  */
 public class Copy {
 
