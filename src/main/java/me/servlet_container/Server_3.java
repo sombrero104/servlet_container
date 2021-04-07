@@ -165,7 +165,7 @@ public class Server_3 {
      * paramName: getinputname paramValue: getinputvalue
      * End of HTTP Message.
      *
-     * 2. POST 요청일 경우.
+     * 2. POST 요청일 경우.(URL Encoding된 body를 Decoding한 출력 결과를 확인할 수 있다.)
      * METHOD: POST REQ: / HTTP VER. HTTP/1.1
      * Header list
      *   Key: Origin Value:  http://localhost:63342
