@@ -144,4 +144,46 @@ public class Server_3 {
         server.boot();
     }
 
+    /**
+     * 실행 후 브라우저에서 http://localhost:8000 로 접속.
+     *
+     * 출력 결과:
+     *
+     * 1. GET 요청일 경우.
+     * METHOD: GET REQ: /?getinputname=getinputvalue&submit=submit HTTP VER. HTTP/1.1
+     * Header list
+     *   Key: Cookie Value:  Idea-3ef64c5c=faeb596a-446d-465a-98aa-aa388ba67073
+     *   Key: Accept Value:  text/html,application/xhtml+xml,application/xml;q=0.9,*⁄*;q=0.8
+     *   Key: Upgrade-Insecure-Requests Value:  1
+     *   Key: Connection Value:  keep-alive
+     *   Key: User-Agent Value:  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15
+     *   Key: Referer Value:  http://localhost:63342/servlet_container/static/param.html?_ijt=5kl9vvcj3maro0qhpbm9ikm751
+     *   Key: Host Value:  localhost:8000
+     *   Key: Accept-Language Value:  ko-kr
+     *   Key: Accept-Encoding Value:  gzip, deflate
+     * paramName: submit paramValue: submit
+     * paramName: getinputname paramValue: getinputvalue
+     * End of HTTP Message.
+     *
+     * 2. POST 요청일 경우.
+     * METHOD: POST REQ: / HTTP VER. HTTP/1.1
+     * Header list
+     *   Key: Origin Value:  http://localhost:63342
+     *   Key: Cookie Value:  Idea-3ef64c5c=faeb596a-446d-465a-98aa-aa388ba67073
+     *   Key: Accept Value:  text/html,application/xhtml+xml,application/xml;q=0.9,*⁄*;q=0.8
+     *   Key: Upgrade-Insecure-Requests Value:  1
+     *   Key: User-Agent Value:  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15
+     *   Key: Connection Value:  keep-alive
+     *   Key: Referer Value:  http://localhost:63342/servlet_container/static/param.html?_ijt=5kl9vvcj3maro0qhpbm9ikm751
+     *   Key: Host Value:  localhost:8000
+     *   Key: Accept-Encoding Value:  gzip, deflate
+     *   Key: Accept-Language Value:  ko-kr
+     *   Key: Content-Length Value:  42
+     *   Key: Content-Type Value:  application/x-www-form-urlencoded
+     * paramName: postinputname paramValue: postinputvalue
+     * paramName: submit paramValue: submit
+     * End of HTTP Message.
+     *
+     */
+
 }
