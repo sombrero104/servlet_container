@@ -118,7 +118,7 @@ public class Server_2 {
      *          Key: Accept-Encoding Value:  gzip, deflate
      *      End of HTTP Message.
      *
-     * 2. POST 요청일 경우.
+     * 2. POST 요청일 경우. (URL Encoding된 body를 확인할 수 있다.)
      * (1) 사파리 브라우저에서 요청한 경우.
      *      METHOD: POST REQ: / HTTP VER. HTTP/1.1
      *      Header list
