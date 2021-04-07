@@ -149,7 +149,7 @@ public class Server_3 {
      *
      * 출력 결과:
      *
-     * 1. GET 요청일 경우.
+     * 1. GET 요청일 경우. (단순 쿼리스트링으로 파라미터가 넘어온다.)
      * METHOD: GET REQ: /?getinputname=getinputvalue&submit=submit HTTP VER. HTTP/1.1
      * Header list
      *   Key: Cookie Value:  Idea-3ef64c5c=faeb596a-446d-465a-98aa-aa388ba67073
@@ -165,7 +165,7 @@ public class Server_3 {
      * paramName: getinputname paramValue: getinputvalue
      * End of HTTP Message.
      *
-     * 2. POST 요청일 경우.(URL Encoding된 body를 Decoding한 출력 결과를 확인할 수 있다.)
+     * 2. POST 요청일 경우.(x-www-form-urlencoded 방식. URL Encoding된 body를 Decoding한 출력 결과를 확인할 수 있다.)
      * METHOD: POST REQ: / HTTP VER. HTTP/1.1
      * Header list
      *   Key: Origin Value:  http://localhost:63342

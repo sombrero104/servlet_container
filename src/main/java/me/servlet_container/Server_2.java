@@ -106,7 +106,7 @@ public class Server_2 {
      *
      * 출력 결과:
      *
-     * 1. GET 요청일 경우.
+     * 1. GET 요청일 경우. (단순 쿼리스트링으로 파라미터가 넘어온다.)
      *      METHOD: GET REQ: / HTTP VER. HTTP/1.1
      *      Header list
      *          Key: Accept Value:  text/html,application/xhtml+xml,application/xml;q=0.9,*⁄*;q=0.8
@@ -118,7 +118,7 @@ public class Server_2 {
      *          Key: Accept-Encoding Value:  gzip, deflate
      *      End of HTTP Message.
      *
-     * 2. POST 요청일 경우. (URL Encoding된 body를 확인할 수 있다.)
+     * 2. POST 요청일 경우. (x-www-form-urlencoded 방식. URL Encoding된 body를 확인할 수 있다.)
      * (1) 사파리 브라우저에서 요청한 경우.
      *      METHOD: POST REQ: / HTTP VER. HTTP/1.1
      *      Header list
