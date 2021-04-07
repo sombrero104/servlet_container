@@ -87,11 +87,11 @@ public class Server_2 {
             System.out.printf("   Key: %s Value: %s\n", headerName, headerMap.get(headerName));
         }
         if(bodyByteList != null) {
-            System.out.print("Message Body --> ");
+            System.out.print("Message Body -->");
             for(byte oneByte : bodyByteList) {
                 System.out.print(oneByte);
             }
-            System.out.println(" <--");
+            System.out.println("<--");
         }
         System.out.println("End of HTTP Message.");
     }
@@ -134,7 +134,7 @@ public class Server_2 {
      *          Key: Accept-Language Value:  ko-kr
      *          Key: Content-Length Value:  34
      *          Key: Content-Type Value:  application/x-www-form-urlencoded
-     *      Message Body --> 10511011211711611097109101611051101121171161189710811710138115117981091051166111511798109105116 <--
+     *      Message Body -->10511011211711611097109101611051101121171161189710811710138115117981091051166111511798109105116<--
      *      End of HTTP Message.
      *
      * (2) 크롬 브라우저에서 요청한 경우.
@@ -159,7 +159,7 @@ public class Server_2 {
      *          Key: Accept-Language Value:  ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
      *          Key: Content-Length Value:  34
      *          Key: Content-Type Value:  application/x-www-form-urlencoded
-     *      Message Body --> 10511011211711611097109101611051101121171161189710811710138115117981091051166111511798109105116 <--
+     *      Message Body -->10511011211711611097109101611051101121171161189710811710138115117981091051166111511798109105116<--
      *      End of HTTP Message.
      *
      */
