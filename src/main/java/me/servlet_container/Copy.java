@@ -23,7 +23,7 @@ public class Copy {
     }
 
     private void noBufferAction() throws IOException{
-        targetFileName = fileName.concat("-nob");
+        targetFileName = fileName.concat("-noBuffer");
         InputStream in = new FileInputStream(fileName);
         OutputStream out = new FileOutputStream(targetFileName);
         int oneInt = -1;
@@ -35,7 +35,7 @@ public class Copy {
     }
 
     private void bufferAction() throws IOException{
-        targetFileName = fileName.concat("-useb");
+        targetFileName = fileName.concat("-useBuffer");
         InputStream in = new FileInputStream(fileName);
         OutputStream out = new FileOutputStream(targetFileName);
         byte[] buffer = new byte[1024];
@@ -48,6 +48,10 @@ public class Copy {
     }
 
     public static void main(String[] args) throws IOException {
+        args = new String[2];
+        args[0] = "/Users/sombrero104/IdeaProjects/servlet_container/images/sample.png";
+        args[1] = "no"; // ""yes";
+
         if(args == null || args.length < 1){
             System.out.println("파일이름 지정과 버퍼 사용 여부가 필요합니다.");
             System.exit(0);
@@ -56,9 +60,9 @@ public class Copy {
         long before = System.currentTimeMillis();
 
         if(args.length > 1 && "no".equals(args[1])){
-            c.noBufferAction();
+            c.noBufferAction(); // 출력 결과: 0.023 밀리세컨드
         }else{
-            c.bufferAction();
+            c.bufferAction(); // 출력 결과: 0.000 밀리세컨드
         }
         long after = System.currentTimeMillis();
         System.out.printf("%.3f\n", (float)((after-before)/1000f));
