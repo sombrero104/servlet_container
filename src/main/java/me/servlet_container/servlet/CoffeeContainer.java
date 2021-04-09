@@ -65,7 +65,18 @@ public class CoffeeContainer {
     }
 
     private void load() {
-
+        Class coffeeImpl = null;
+        try {
+            coffeeImpl = urlClassLoader.loadClass("CoffeeImpl");
+            Coffee coffee = (Coffee)coffeeImpl.newInstance();
+            System.out.println(coffee.getName());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private void action() {
