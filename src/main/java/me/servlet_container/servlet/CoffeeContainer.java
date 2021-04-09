@@ -2,6 +2,7 @@ package me.servlet_container.servlet;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -68,13 +69,17 @@ public class CoffeeContainer {
         Class coffeeImpl = null;
         try {
             coffeeImpl = urlClassLoader.loadClass("me.servlet_container.servlet.custom.target_fake.classes.CoffeeImpl");
-            Coffee coffee = (Coffee)coffeeImpl.newInstance();
+            Coffee coffee = (Coffee)coffeeImpl.getDeclaredConstructor().newInstance();
             System.out.println(coffee.getName()); // 출력 결과: DECAF HOUSE BLEND
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
     }
