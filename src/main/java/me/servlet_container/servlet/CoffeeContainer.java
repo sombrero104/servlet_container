@@ -18,10 +18,11 @@ public class CoffeeContainer {
         String contextPath = "/Users/sombrero104/IdeaProjects/servlet_container/"
                             + "target/classes/me/servlet_container/servlet/custom";
         String classPath = contextPath.concat(File.separator)
-                .concat("target_fake").concat(File.separator).concat("classes"); // classes 디렉토리에서 파일을 가져온다.
+                .concat("target_fake").concat(File.separator).concat("classes"); // classes 디렉토리에서 파일들을 가져온다.
         String libPath = contextPath.concat(File.separator)
-                .concat("target_fake").concat(File.separator).concat("lib"); // lib 디렉토리에서 파일을 가져온다.
+                .concat("target_fake").concat(File.separator).concat("lib"); // lib 디렉토리에서 파일들을 가져온다.
 
+        // classes 디렉토리에서 파일들을 가져온다.
         File classes = new File(classPath);
         List<URL> urlList = new ArrayList<>();
         if(classes.exists()) {
@@ -32,6 +33,7 @@ public class CoffeeContainer {
             }
         }
 
+        // lib 디렉토리에서 FileFilter를 사용하여 .jar 파일들만 가져온다.
         File lib = new File(libPath);
         if(lib.exists()) {
             try {
