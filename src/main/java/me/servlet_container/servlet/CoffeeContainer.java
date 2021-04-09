@@ -67,9 +67,9 @@ public class CoffeeContainer {
     private void load() {
         Class coffeeImpl = null;
         try {
-            coffeeImpl = urlClassLoader.loadClass("CoffeeImpl");
+            coffeeImpl = urlClassLoader.loadClass("me.servlet_container.servlet.custom.target_fake.classes.CoffeeImpl");
             Coffee coffee = (Coffee)coffeeImpl.newInstance();
-            System.out.println(coffee.getName());
+            System.out.println(coffee.getName()); // 출력 결과: DECAF HOUSE BLEND
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
