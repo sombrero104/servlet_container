@@ -1,4 +1,4 @@
-package me.servlet_container;
+package me.servlet_container.http;
 
 import java.io.IOException;
 import java.io.InputStream;
